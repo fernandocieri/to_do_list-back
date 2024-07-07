@@ -50,6 +50,10 @@ class DutyManager {
 
     await queryDatabase(query, values);
   }
+
+  async deleteDuty(id: string): Promise<void> {
+    await queryDatabase("DELETE FROM duties WHERE id = $1", [id]);
+  }
 }
 
 export default new DutyManager();
