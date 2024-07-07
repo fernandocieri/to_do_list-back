@@ -18,8 +18,11 @@ class DutyManager {
     return new Duty(row.id, row.name, row.done);
   }
 
-  async createDuty(name: string): Promise<void> {
-    await queryDatabase("INSERT INTO duties (name) VALUES ($1)", [name]);
+  async createDuty(id: string, name: string): Promise<void> {
+    await queryDatabase("INSERT INTO duties (id, name) VALUES ($1, $2)", [
+      id,
+      name,
+    ]);
   }
 
   async updateDuty(
