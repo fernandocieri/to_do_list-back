@@ -1,0 +1,596 @@
+{
+	"info": {
+		"_postman_id": "15b17185-1e99-4b35-9890-2648fe7999a0",
+		"name": "DIGITAL55",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Duties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/duties/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"duties",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Guties",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/duties/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "687"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2af-LWWzbKZFe6OWrgB/sYIwILQhFuU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:02:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"a46312c8-f030-4a94-983a-f0c907398f93\",\n        \"name\": \"Complete the project documentation\"\n    },\n    {\n        \"id\": \"582dbc8f-885f-47a6-85ca-ac4ba9ec63f1\",\n        \"name\": \"Prepare for the meeting\"\n    },\n    {\n        \"id\": \"0bbee733-0c3e-490a-92e4-52f9e15c2b16\",\n        \"name\": \"Write the test cases for the new feature\"\n    },\n    {\n        \"id\": \"568db981-3c5a-4166-b146-c2c0550fadf6\",\n        \"name\": \"Refactor the codebase for better performance\"\n    },\n    {\n        \"id\": \"051c5fe5-bb29-4f26-aa02-bd65455c547a\",\n        \"name\": \"Fix the bugs reported in the last sprint\"\n    },\n    {\n        \"id\": \"f6107601-58d8-4e8b-bd70-02d787feea19\",\n        \"name\": \"Review the pull requests\"\n    },\n    {\n        \"id\": \"3388011a-ced8-4c59-b9e7-03335b65578e\",\n        \"name\": \"Update the project roadmap\"\n    },\n    {\n        \"id\": \"a2c86474-6f21-4a0b-93e7-709c8cef44ae\",\n        \"name\": \"testing\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "A Duty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/duties/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"duties",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post a Duty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/duties/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-oWCQ7TiwGolNtNpGYOpuQJ64ikw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:02:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Duty created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "A Duty",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test patch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/duties/{id}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"duties",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Duty does not exist",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test patch name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/duties/a2c86474-6f21-4a0b-93e7-709c8cef44ae",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								"a2c86474-6f21-4a0b-93e7-709c8cef44ae"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-KjJkCCnCpO0zHi0Pb6hFLGe3OnY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:36:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Duty not found\"\n}"
+				},
+				{
+					"name": "Duty name",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test patch name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/duties/a2c86474-6f21-4a0b-93e7-709c8cef44ae",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								"a2c86474-6f21-4a0b-93e7-709c8cef44ae"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-CXJbJaz7EodTRFilSnDHF33T+aI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:37:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Duty updated successfully\"\n}"
+				},
+				{
+					"name": "Duty done",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"done\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/duties/743d959d-5c7e-4ab4-a67e-862d7c8539d6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								"743d959d-5c7e-4ab4-a67e-862d7c8539d6"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-CXJbJaz7EodTRFilSnDHF33T+aI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:44:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Duty updated successfully\"\n}"
+				},
+				{
+					"name": "Patch all fields",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update all duty\",\r\n    \"done\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/duties/743d959d-5c7e-4ab4-a67e-862d7c8539d6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								"743d959d-5c7e-4ab4-a67e-862d7c8539d6"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-CXJbJaz7EodTRFilSnDHF33T+aI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 13:48:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Duty updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "A Duty",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/duties/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"duties",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a Duty",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/duties/261b927e-4625-4b45-bc0c-8c644404e7c7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"duties",
+								"261b927e-4625-4b45-bc0c-8c644404e7c7"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 14:03:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/api/v0",
+			"type": "default"
+		}
+	]
+}
