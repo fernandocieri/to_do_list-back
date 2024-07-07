@@ -49,5 +49,5 @@ You can access the documentation for each endpoint using Postman. Import the `DI
 
 2. **Run Test suites**:
 ```shell
-npm run dev
+npm run test
 ```
