@@ -3,7 +3,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE
     IF NOT EXISTS duties (
         id UUID PRIMARY KEY DEFAULT uuid_generate_v4 (),
-        name VARCHAR(255) NOT NULL
+        name VARCHAR(255) NOT NULL,
+        done BOOLEAN DEFAULT FALSE
     );
 
 INSERT INTO

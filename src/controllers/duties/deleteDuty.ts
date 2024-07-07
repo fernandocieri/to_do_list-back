@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { validate } from "uuid";
 import DutyManager from "../../managers/duties.manager";
 
 export const deleteDuty = async (req: Request, res: Response) => {
@@ -6,6 +7,9 @@ export const deleteDuty = async (req: Request, res: Response) => {
     const { id } = req.params;
     if (typeof id !== "string") {
       return res.status(400).json({ message: "Id field must be a string" });
+    }
+    if (!validate(id)) {
+      return res.status(400).json({ message: "Id is not valid" });
     }
 
     const duty = await DutyManager.getDuty(id);
