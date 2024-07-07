@@ -1,7 +1,8 @@
 import { Pool } from "pg";
 import dotenv from "dotenv";
 
-dotenv.config({ path: process.env.NODE_ENV === "test" ? ".env.test" : ".env" });
+const envFile = process.env.NODE_ENV === "test" ? ".env.test" : ".env";
+dotenv.config({ path: envFile });
 
 const pool = new Pool({
   user: process.env.DB_USER,
@@ -20,3 +21,5 @@ export const queryDatabase = async (query: string, params?: any[]) => {
     client.release();
   }
 };
+
+(queryDatabase as any).pool = pool;
